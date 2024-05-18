@@ -9,5 +9,6 @@ COPY package.json package-lock.json ./
 RUN npm install --silent
 
 COPY . ./
+RUN chmod -R 777 /app/node_modules
 
 CMD ["npm", "start"]
